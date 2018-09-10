@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="DxControls.Progress.DCircleProgress"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DxControls.Progress"
+             mc:Ignorable="d" Loaded="UserControl_Loaded" Height="107.812" Width="108.984">
+    <Grid>
+
+        <Path x:Name="FormCircle" Stroke="#FF273C55" Fill="#FF83FD2E" >
+            <Path.Data>
+                <PathGeometry >
+                    <PathFigure x:Name="progressFig"   IsClosed="True" StartPoint="100,50">
+                        <ArcSegment x:Name="arcExt"  IsSmoothJoin="True" Point="99.9999238363679, 50.087271744609" Size="50,50" IsLargeArc="True"/>
+                        <LineSegment x:Name="line1" Point="89.9999390690943,50.0698173956872" IsSmoothJoin="True"/>
+                        <ArcSegment x:Name="arcInt" SweepDirection="Clockwise" Point="90,50" Size="40,40" IsLargeArc="True" IsSmoothJoin="True"/>
+                    </PathFigure>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+        <TextBlock x:Name="tbPercent" HorizontalAlignment="Left" Height="32" Margin="23,34,0,0" TextWrapping="Wrap" Text="100%" VerticalAlignment="Top" Width="54" FontSize="22" TextAlignment="Right" RenderTransformOrigin="-0.283,-0.208"/>
+    </Grid>
+</UserControl>
